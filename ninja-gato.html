@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja-Gato</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+    <body>
+        <h1 class="text-success text-center py-3">El NinGato</h1>
+        <div class="row py-2" id="imagenes">
+            <div class="col-12 pt-1">
+                <img src="img/cat0.png" data-src="img/ninja0.png" alt="ningato0">
+            </div>
+            <div class="col-12">
+                <img src="img/cat1.png" data-src="img/ninja1.png" alt="ningato1">
+            </div>
+            <div class="col-12">
+                <img src="img/cat2.png" data-src="img/ninja2.png" alt="ningato2">
+            </div>
+            <div class="col-12">
+                <img src="img/cat3.png" data-src="img/ninja3.png" alt="ningato3">
+            </div>
+            <div class="col-12">
+                <img src="img/cat4.png" data-src="img/ninja4.png" alt="ningato4">
+            </div>
+        </div>
+    </body>
+    <script>
+        $(document).ready(function() {
+            $('img').on('click',function() {
+            console.log('click');
+            const ninjato = $(this).attr('data-src');
+            const gatinja = $(this).attr('src');
+            $(this).attr('src', ninjato);
+            $(this).attr('data-src',gatinja);
+            })
+        })
+    
+        
+
+    </script>
+</html>
